@@ -59,6 +59,9 @@ body{
 #numbers-display{
     height: 50%;
     width: 80%;
+    background-color: white;
+    font-size: 30px;
+    text-align: end;
 }
 
 button{
@@ -78,3 +81,6 @@ button{
     color: white;
 }
 
+.special:hover{
+    filter: brightness(90%)
+}
