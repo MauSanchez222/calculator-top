@@ -75,12 +75,12 @@ button{
     width: 9vw;
 }
 
-.special{
+.special, .op{
     background-color: blue;
     outline: none;
     color: white;
 }
 
-.special:hover{
+.special:hover, .op:hover{
     filter: brightness(90%)
 }
