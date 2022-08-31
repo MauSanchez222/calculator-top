@@ -2,6 +2,7 @@ let num1 = 0;
 let num2 = 0;
 let op;
 let operated = false;
+let hasOperator = false;
 const allNrs = document.querySelectorAll('.number');
 const allOps = document.querySelectorAll('.op');
 const dispBar = document.getElementById('numbers-display');
@@ -54,6 +55,14 @@ function getNumbers(){
     num2 = Number(numbers[1]);
 }
 
+function getResult(){
+    getNumbers();
+    clearDisplay();
+    operate(num1,num2,op);
+    operated = true;
+    hasOperator = false;
+}
+
 allNrs.forEach((item) => item.addEventListener('click', () => {
     if (operated === true){
         clearDisplay()
@@ -64,18 +73,17 @@ allNrs.forEach((item) => item.addEventListener('click', () => {
 
 
 allOps.forEach((item) => item.addEventListener('click', () => {
+    if (hasOperator === true){
+        getResult()
+    }
     dispBar.append(item.innerHTML);
     op = item.innerHTML
     operated = false;
+    hasOperator = true;
 }));
 
 
 btnClear.addEventListener('click', () => clearDisplay());
 
 
-btnEquals.addEventListener('click', () => {
-    getNumbers();
-    clearDisplay();
-    operate(num1,num2,op);
-    operated = true;
-})
+btnEquals.addEventListener('click', () => getResult())
