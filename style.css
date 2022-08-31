@@ -81,6 +81,6 @@ button{
     color: white;
 }
 
-.special:hover, .op:hover{
+.special:hover, .op:hover, .number:hover{
     filter: brightness(90%)
 }
