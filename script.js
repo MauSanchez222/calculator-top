@@ -36,16 +36,16 @@ function clearDisplay(){
 
 function operate(nr1, nr2, operator){
     if (operator === '+'){
-        dispBar.innerHTML = addNumbers(nr1, nr2)
+        dispBar.innerHTML = Math.round(addNumbers(nr1, nr2) * 100)/100
     }
     else if(operator === '-'){
-        dispBar.innerHTML = subtractNumbers(nr1,nr2)    
+        dispBar.innerHTML = Math.round(subtractNumbers(nr1,nr2) * 100)/100   
     }
     else if(operator === '÷'){
-        dispBar. innerHTML = divideNumbers(nr1,nr2)
+        dispBar. innerHTML = Math.round(divideNumbers(nr1,nr2) * 100)/100 
     }
     else{
-        dispBar.innerHTML = multiplyNumbers(nr1,nr2)
+        dispBar.innerHTML = Math.round(multiplyNumbers(nr1,nr2) * 100)/100
     }
 
 }
