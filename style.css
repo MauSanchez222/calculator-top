@@ -63,6 +63,9 @@ body{
     font-size: 30px;
     text-align: end;
     padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow: scroll;
 }
 
 button{
