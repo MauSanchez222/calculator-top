@@ -64,8 +64,8 @@ body{
     text-align: end;
     padding-right: 5px;
     white-space: nowrap;
-    overflow: hidden;
-    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 button{
